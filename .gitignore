@@ -1,3 +1,5 @@
 .DS_Store
-**.docx
-private
+.texpadtmp/
+old/
+cv--private.*
+*.log

@@ -1,0 +1,157 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} %for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo}
+\usepackage{supertabular} %for Grades
+\usepackage{titlesec} %custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[
+Path = fonts/,
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Christopher Benjamin \textsc{Ashton}
+	}\bigskip\par}
+
+\begin{center}
+\customcontact
+\end{center}
+
+%--------------------SECTIONS-----------------------------------
+
+\section{Profile}
+
+I am a creative, organised and highly efficient full-stack web developer. I recently graduated with a 1st class degree in Software Engineering and my dissertation won the \emph{British Computer Society Prize for the Best Major Project}. In my spare time I run my own web development company - whose past clients include the BBC - and am a tenor in the prestigious BBC Symphony Chorus.
+
+\section{Key Achievements and Skills}
+
+\begin{itemize}
+    \setlength\itemsep{0.3em}
+
+    \item \textbf{Full-stack web development} – passionate about test-driven, self-documenting, clean and collaborative code. I specialise in front-end web development.
+
+    \begin{itemize}
+        \setlength\itemsep{0.3em}
+
+        \item \textbf{JavaScript} - masterful development of modular, object-oriented, unobtrusive JavaScript developed through TDD, using progressive enhancement to support backwards compatibility. Familiar with publish/subscribe and MVC design patterns, jQuery, RequireJS, AJAX, Jasmine, CasperJS, Node.
+
+        \item \textbf{Other front-end technologies} – Responsive web design: developed \url{http://reff.it} using “mobile first” Bootstrap front-end, a web app allowing users to share snippets of text rather than long web pages. Implemented semantic HTML5 and schema markup and modified Apache to use SEO-friendly URLs. Active user of SASS, CSS3 and BEM syntax. Developed a 3D visualisation of the solar system in WebGL (university assignment, achieving 89\%): \url{http://users.aber.ac.uk/cba1/webgl/source}
+
+        \item I was the sole developer of the Commonwealth Games Quiz: \url{http://bbc.in/1ll3XHE}, the most read/shared article on BBC News on the day of publication (viewed 1.7 million times), shared 39,000 times over the course of the games and featured on BBC Breakfast. Recently won \emph{Best News Data App} at the Data Journalism Awards 2015. Developed to support internationalisation, I took the initiative to translate it into Welsh: \url{http://bbc.in/1nDNxjD}
+
+        \item \textbf{Back-end technologies} – highly experienced with OO PHP (v5.4+), MVCR architecture, PHP unit tests (TDD), Ruby and Cucumber integration tests (BDD), Bash, Java, SQL, Node, Grunt, WordPress (\url{http://voicecouncil.com} - bespoke responsive theme, custom plugin for the slideshow and app review formats). Knowledge of XSS and prevention of SQL injection through PDO. Some experience of Zend, Ruby on Rails, AWS, C, C++, Perl, Python.
+
+    \end{itemize}
+
+    \item \textbf{Technical leadership} – assign tasks to subcontractors through my own installation of JIRA, managing their time alongside project deadlines and code reviewing their work on GitHub to ensure the code remains maintainable. Good communication skills, demonstrated through giving a well-received presentation to 40 developers on a technical subject while at the BBC.
+
+    \item \textbf{Efficiency} – developed a ‘common tasks toolkit’ at the BBC, cutting the time taken to perform some tasks down from half an hour to under a minute and removing one of their last dependencies on legacy systems. Templated the ‘datapic’ format: \url{http://bit.ly/1wT6XTz}
+
+    \item \textbf{Testing} – hand-built a custom Node implementation of Cucumber for BDD testing. Manually tested web apps in multiple browsers, including use of virtual machines to test older versions of IE. Device-tested applications across new and old Android/iOS devices, using exploratory testing to validate application behaviour and responsiveness.
+
+    \item \textbf{Agile/Scrum} – worked in scrum teams adopting agile techniques including continuous integration (Travis CI), pair programming, code reviews and refactoring. Regular stand-ups, sprint planning and retrospectives.
+
+\end{itemize}
+
+
+\section{Employment}
+\begin{tabular}{r|p{11cm}}
+%------------------------------
+\textsc{07/2015 - Present} & BBC, London
+\\&\emph{Test Engineer}
+\\&\footnotesize{Responsible for the automated testing strategy in BBC Visual Journalism.}
+%------------------------------
+\\\multicolumn{2}{c}{} \\
+\textsc{08/2014 - Present} & Webdapper Ltd
+\\&\emph{Founder}
+\\&\footnotesize{My company offers end-to-end web development solutions to clients including the BBC. I project-manage and lead technical implementations by subcontracting work to a team of trusted developers and designers, accommodating differing schedules, managing expectations and regularly code reviewing to ensure codebase cohesiveness.}
+%------------------------------
+\\\multicolumn{2}{c}{} \\
+\textsc{07/2013 - 08/2014} & BBC, London
+\\&\emph{Trainee Web Developer}
+\\&\footnotesize{Created multiple self-contained, robustly tested, bespoke responsive applications within tight deadlines for the BBC News website, delivering to an audience of millions. Built and maintained toolkits and frameworks to ease development and production workflows.}
+%------------------------------
+\\\multicolumn{2}{c}{} \\
+\textsc{07/2010 - 09/2011} & NatWest Bank, Ceredigion
+\\&\emph{Customer Service Officer}
+\\&\footnotesize{Gained skills in record keeping and in maintaining professionalism under pressure, communicating through the medium of Welsh where required.}
+\end{tabular}
+
+\section{Education}
+
+\begin{tabular}{rp{11cm}}
+\textsc{09/2011 - 06/2015}
+&
+\textbf{Aberystwyth University}, Wales
+\\& BEng (Hons) Software Engineering (1\textsuperscript{st}). BCS-accredited. Grade: 84\%
+
+\\&  Awards: \emph{British Computer Society Prize for the Best Major Project}
+
+\\& Dissertation: \emph{Online Dispute Resolution for Maritime Collisions}: an open-source ODR platform with plugin support for AI-driven automated resolutions. \url{http://smartresolution.org}
+
+\\& Key modules: \emph{Developing Internet-Based Applications} (Ruby on Rails) - 84\%; \emph{Advanced Computer Graphics} (WebGL) - 79\%; \emph{Interactive Web Programming} (2D canvas) - 86\%; \emph{Web Programming} (PHP/SQL) - 94\%; \emph{C++, C and Java Programming Paradigms} - 82\%
+
+\\
+\textsc{2003 - 2010}
+&
+\textbf{Ysgol Gyfun Llanbedr Pont Steffan}, Wales
+\\& \begin{tabular}{lp{11cm}}
+    A Levels: & Mathematics (A), Music (A), Chemistry (B)
+    \\AS Level: & Biology (B)
+    \\GCSEs: & 13 total, 11 at grade A*/A
+    \end{tabular}
+
+\end{tabular}
+
+\section{Interests}
+I'm currently a tenor in the \emph{BBC Symphony Chorus} and regularly perform complex choral repertoire at internationally televised concerts. Previously: \emph{National Youth Choir of Wales} (Tenor: two years), \emph{Elizabethan Madrigal Singers} (Choral Director: one year, Tenor: three years).
+
+\section{References}
+\customreferences
+
+\end{document}
