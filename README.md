@@ -16,7 +16,7 @@ I have a `cv--private.tex` (which is git-ignored) with my "real" values for refe
 Generate a PDF by running:
 
 ```
-pdflatex cv.tex
+pdflatex cv--public.tex
 ```
 
 Though if your Mac is anything like mine, you'll get a bunch of errors. I use [Texpad](https://www.texpadapp.com/osx) instead - life's too short!
