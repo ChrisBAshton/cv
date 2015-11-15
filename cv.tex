@@ -3,10 +3,6 @@
 %--------------------BEGIN DOCUMENT----------------------
 \begin{document}
 
-\pagestyle{empty} % non-numbered pages
-
-\font\fb=''[cmr10]'' %for use with \LaTeX command
-
 %--------------------TITLE-------------
 \par{\centering
         {\Huge Christopher Benjamin \textsc{Ashton}
@@ -32,23 +28,28 @@ Award-winning 1\textsuperscript{st} class Software Engineering graduate (\emph{B
     \begin{itemize}
         \setlength\itemsep{0.3em}
 
-        \item \textbf{JavaScript} - masterful development of modular, object-oriented, unobtrusive JavaScript developed through TDD, using progressive enhancement to support backwards compatibility. Familiar with publish/subscribe and MVC design patterns, jQuery, RequireJS, AJAX, Jasmine, CasperJS, Node.
+        \item \textbf{JavaScript} - masterful development of modular, object-oriented, unobtrusive JavaScript developed through TDD, using progressive enhancement to support backwards compatibility. Comfortable with publish/subscribe and MVC design patterns, cross-browser vanilla JavaScript, jQuery, RequireJS, Jasmine/QUnit, Node.
 
-        \item \textbf{Other front-end technologies} – Responsive web design: developed \url{http://reff.it} using “mobile first” Bootstrap front-end, a web app allowing users to share snippets of text rather than long web pages. Implemented semantic HTML5 and schema markup and modified Apache to use SEO-friendly URLs. Active user of SASS, CSS3 and BEM syntax. Developed a 3D visualisation of the solar system in WebGL (university assignment, achieving 89\%): \url{http://users.aber.ac.uk/cba1/webgl/source}
+        \item I was the main developer of the Commonwealth Games Quiz (\emph{Best News Data App}, Data Journalism Awards 2015), featured on BBC Breakfast and most read and shared article on BBC News on the day of publication: \url{http://bbc.in/1ll3XHE}. Developed to support internationalisation, I took the initiative to translate it into Welsh: \url{http://bbc.in/1nDNxjD}
 
-        \item I was the sole developer of the Commonwealth Games Quiz: \url{http://bbc.in/1ll3XHE}, the most read/shared article on BBC News on the day of publication (viewed 1.7 million times), shared 39,000 times over the course of the games and featured on BBC Breakfast. Recently won \emph{Best News Data App} at the Data Journalism Awards 2015. Developed to support internationalisation, I took the initiative to translate it into Welsh: \url{http://bbc.in/1nDNxjD}
+        \item \textbf{Front-end technologies} – ``mobile first'' development of responsive websites, including \url{http://reff.it}; a web app allowing users to share relevant text from long web pages. Implemented semantic schema/HTML5 markup and modified Apache to use SEO-friendly URLs. Active user of CSS3 (pre-processed with SASS) and BEM syntax. Developed a 3D solar system in WebGL: \url{http://chrisbashton.github.io/solar-system-webgl/source/}
 
-        \item \textbf{Back-end technologies} – highly experienced with OO PHP (v5.4+), MVCR architecture, PHP unit tests (TDD), Ruby and Cucumber integration tests (BDD), Bash, Java, SQL, Node, Grunt, WordPress (\url{http://voicecouncil.com} - bespoke responsive theme, custom plugin for the slideshow and app review formats). Knowledge of XSS and prevention of SQL injection through PDO. Some experience of Zend, Ruby on Rails, AWS, C, C++, Perl, Python.
+        \item \textbf{Back-end technologies} – highly experienced with OO PHP, MVCR architecture, PHP unit tests, Bash, Java, SQL, Node, Grunt. Knowledge of XSS and prevention of SQL injection through PDO. Some experience of Zend, Ruby on Rails, AWS.
+
+        \item \textbf{WordPress} – expert at crafting bespoke themes and plugins, including plugins defining custom taxonomies (`app reviews'): \url{http://musicmakerapps.com}; a responsive e-commerce theme: \url{http://hover-bike.com}; and parent/child themes for related magazine websites: \url{http://loopinglive.com} and
+        \url{http://thevintagemusician.com}.
 
     \end{itemize}
 
-    \item \textbf{Technical leadership} – assign tasks to subcontractors through my own installation of JIRA, managing their time alongside project deadlines and code reviewing their work on GitHub to ensure the code remains maintainable. Good communication skills, demonstrated through giving a well-received presentation to 40 developers on a technical subject while at the BBC.
+    \item \textbf{Testing} – world-class author of declarative Cucumber features alongside clean, reusable Ruby step definitions for BDD. Hand-built an in-house Cucumber framework in Node. Set up suites of automated tests inside Docker on Jenkins CI, spanning unit, functional and visual regression tests. Manually tested web apps in multiple browsers, including old versions of IE inside virtual machines, using exploratory techniques to validate application behaviour and responsiveness.
 
     \item \textbf{Efficiency} – developed a ‘common tasks toolkit’ at the BBC, cutting the time taken to perform some tasks down from half an hour to under a minute and removing one of their last dependencies on legacy systems. Templated the ‘datapic’ format: \url{http://bit.ly/1wT6XTz}
 
-    \item \textbf{Testing} – hand-built a custom Node implementation of Cucumber for BDD testing. Manually tested web apps in multiple browsers, including use of virtual machines to test older versions of IE. Device-tested applications across new and old Android/iOS devices, using exploratory testing to validate application behaviour and responsiveness.
+    \item \textbf{Technical leadership} – I assign tasks to subcontractors through my own installation of JIRA, managing their time alongside project deadlines and code reviewing their work on GitHub to ensure the code remains maintainable. Good communication skills, demonstrated through giving a well-received presentation to 40 developers on a technical subject while at the BBC.
 
     \item \textbf{Agile/Scrum} – worked in scrum teams adopting agile techniques including continuous integration (Travis CI), pair programming, code reviews and refactoring. Regular stand-ups, sprint planning and retrospectives.
+
+    \item \textbf{Professional Memberships} – Professional Member, British Computer Society (MBCS)
 
 \end{itemize}
 
@@ -58,7 +59,9 @@ Award-winning 1\textsuperscript{st} class Software Engineering graduate (\emph{B
 %------------------------------
 \textsc{07/2015 - Present} & BBC, London
 \\&\emph{Test Engineer}
-\\&\footnotesize{Responsible for the automated testing strategy in BBC Visual Journalism.}
+\\&\footnotesize{
+Set up suites of automated Cucumber and Wraith tests (using Docker) on CI to test against other products' usage of our In-Depth Toolkit and pinpoint regressions early. Took ownership of the maintenance and development of the open-source Wraith visual regression testing tool. Came up with the cost-effective ``Three Phase Attack'' testing strategy, sharing this innovative approach with the industry through a soon-to-be-published article in Smashing Magazine.
+}
 %------------------------------
 \\\multicolumn{2}{c}{} \\
 \textsc{08/2014 - Present} & Webdapper Ltd
@@ -92,8 +95,6 @@ Award-winning 1\textsuperscript{st} class Software Engineering graduate (\emph{B
 \end{itemize}
 
 \\& Dissertation: \emph{Online Dispute Resolution for Maritime Collisions}: an open-source ODR platform with plugin support for AI-driven automated resolutions. \url{http://smartresolution.org}
-
-\\& Key modules: \emph{Developing Internet-Based Applications} (Ruby on Rails) - 84\%; \emph{Advanced Computer Graphics} (WebGL) - 79\%; \emph{Interactive Web Programming} (2D canvas) - 86\%; \emph{Web Programming} (PHP/SQL) - 94\%; \emph{C++, C and Java Programming Paradigms} - 82\%
 
 \\
 \textsc{2003 - 2010}
