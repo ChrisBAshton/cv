@@ -1,9 +1,7 @@
 \documentclass[class=article, crop=false]{standalone}
 
-%--------------------BEGIN DOCUMENT----------------------
 \begin{document}
 
-%--------------------TITLE-------------
 \par{\centering
         {\Huge Christopher Benjamin \textsc{Ashton}
     }\bigskip\par}
@@ -12,112 +10,23 @@
 \customcontact
 \end{center}
 
-%--------------------SECTIONS-----------------------------------
-
 \section{Profile}
+\subfile{partials/profile}
 
-Full-stack web developer and award-winning 1\textsuperscript{st} class Software Engineering graduate (\emph{Best Bachelor Degree in Computer Science, Best Major Project}); I am a highly efficient, organised and creative individual currently working full-time for the BBC. In my spare time I run my own digital agency and am a tenor in the BBC Symphony Chorus.
+\section{Key Skills}
+\subfile{partials/skills}
 
-\section{Key Achievements and Skills}
+\section{Key Achievements}
+\subfile{partials/achievements}
 
-\begin{itemize}
-    \setlength\itemsep{0.3em}
-
-    \item \textbf{Technical leadership} –  responsible for the technical roadmap within BBC News' Visual Journalism team, recently leading the team's upgrade to a modular ES6 architecture. Collaborate across teams to devise maintainable, future-proof solutions, demonstrated by working with the News App team to agree on an API for consumption of Visual Journalism content.
-
-    \item \textbf{Communication skills} - led BBC Visual Journalism's adoption of user stories as a communication tool and a developer aid. Regularly give well-received presentations to technical and non-technical audiences at all levels. Work effectively in scrum teams adopting agile techniques.
-
-    \item \textbf{Automated testing} – lead maintainer of the Wraith visual regression testing tool, which has gone on to become the BBC's most-starred open-source project. Highly adept at authoring declarative Cucumber features alongside clean, reusable Ruby step definitions. Hand-built an in-house BDD framework in Node. Set up suites of automated tests in Docker on Jenkins CI.
-
-    \item \textbf{Manual testing} – tested apps across multiple devices and browsers in my role as Test Engineer at the BBC, using exploratory techniques to validate application behaviour and responsiveness. Devised and documented an efficient manual-testing strategy, dubbed the ``Three Phase Attack'', in a well-received article published on \emph{Smashing Magazine}.
-
-    \item \textbf{Accessibility} - currently volunteer as an Accessibility Champion at the BBC, promoting accessible web design and development within my team. Write semantic HTML5 augmented with accessibility attributes, and have experience of using schemas for structured data. Tested sites against WAI validators, colour contrast checkers, and screen readers in my role as Test Engineer.
-
-    \item \textbf{SASS, CSS3 \& BEM} - I was the main developer of the Commonwealth Games Quiz (\emph{Best News Data App}, Data Journalism Awards 2015), featured on BBC Breakfast and most read and shared article on BBC News on the day of publication: \url{http://bbc.in/1ll3XHE}. Developed to support internationalisation, I took the initiative to translate it into Welsh: \url{http://bbc.in/1nDNxjD}
-
-    \item \textbf{JavaScript \& Node} - expert developer of self-documenting, object-oriented, unobtrusive JavaScript developed through TDD (Mocha/Chai). Equally comfortable whether writing NPM modules in ES6 or cross-browser ES5 backwards-compatible to IE6. Developed a 3D solar system in WebGL: \url{http://chrisbashton.github.io/solar-system-webgl/source/}
-
-    \item \textbf{Back-end web development} - highly experienced with OO PHP and MVCR architecture, using frameworks such as Zend and F3. Apply techniques such as PDO to prevent SQL injection attacks, encryption and salting for sensitive data, and have knowledge of preventing XSS attacks.
-
-    \item \textbf{AWS} - developed a horizontally scalable, hosted webhooks platform: \url{http://githooks.io}. This side project runs on LAMP architecture on an EC2 instance, and uses a clever method for securely passing GitHub access tokens to webhooks which are executed on AWS Lambda.
-
-    \item \textbf{WordPress} – created a number of bespoke themes and plugins, including plugins defining custom taxonomies (`app reviews'): \url{http://musicmakerapps.com}; a responsive e-commerce theme: \url{http://hover-bike.com}; and parent/child themes for related magazine websites: \linebreak\url{http://loopinglive.com} and \url{http://thevintagemusician.com}.
-
-\end{itemize}
+\section{Projects}
+\subfile{partials/projects}
 
 \section{Employment}
-\begin{tabular}{r|p{11cm}}
-%------------------------------
-\textsc{02/2016 - Present}
-&Web Developer
-\\\emph{BBC, London}
-&\footnotesize{
-\par{Led the team's upgrade to a modular ES6 infrastructure and continue to be responsible for the team's technical roadmap.}
-\par{Regularly create engaging, full-stack applications in up to 28 languages online and for the BBC News and Sport apps. These are developed for high-profile events with immovable deadlines, such as the Olympic Games, EU Referendum and US Election.}
-\par{Helped to recruit for junior roles by screening CVs and participating in interviews and coding exercises. Act as first line of support for junior colleagues, with increasing line management duties.}
-}
-%------------------------------
-\\\multicolumn{2}{c}{} \\
-\textsc{07/2015 - 01/2016}
-&Test Engineer
-\\\emph{BBC, London}
-&\footnotesize{
-Won the \emph{Best Contributor of the Year} award for my contribution to Wraith. Set up suites of automated Cucumber and Wraith tests (using Docker) on CI.  Devised the cost-effective ``Three Phase Attack'' testing strategy, published in Smashing Magazine:
-\url{https://www.smashingmagazine.com/2016/02/high-impact-minimal-effort-cross-browser-testing/}
-}
-%------------------------------
-\\\multicolumn{2}{c}{} \\
-\textsc{08/2014 - Present}
-&Founder
-\\\emph{Webdapper Ltd}
-&\footnotesize{Led the development of over 10 websites, continuing to maintain them through project-managing a team of trusted developers and designers. Generated over 20,000 Facebook likes for my clients, through carefully planned advertizing campaigns.}
-%------------------------------
-\\\multicolumn{2}{c}{} \\
-\textsc{07/2013 - 08/2014}
-&Trainee Web Developer
-\\\emph{BBC, London}
-&\footnotesize{Created `mobile-first', bespoke applications to tight deadlines for the BBC News website, delivering to an audience of millions. Built a `Common Tasks' toolkit to ease development workflows, cutting the time taken to perform some tasks down from half an hour to under a minute. Templated the ‘datapic’ format: \url{http://bit.ly/1wT6XTz}}
-\end{tabular}
+\subfile{partials/employment}
 
 \section{Education}
-
-\begin{tabular}{rp{11cm}}
-\textsc{2011 - 2015}
-&
-\textbf{Aberystwyth University}, Wales
-\\& BEng (Hons) Software Engineering (1\textsuperscript{st}). BCS-accredited. Grade: 84\%
-
-Dissertation: \emph{Online Dispute Resolution for Maritime Collisions}: an open-source ODR platform with plugin support for AI-driven automated resolutions. Hosted on AWS: \url{http://smartresolution.org}
-
-\\
-\textsc{2003 - 2010}
-&
-\textbf{Ysgol Gyfun Llanbedr Pont Steffan}, Wales
-\\& \begin{tabular}{lp{11cm}}
-    A Levels: & Mathematics (A), Music (A), Chemistry (B)
-    \\AS Level: & Biology (B)
-    \\GCSEs: & 13 total, 11 at grade A*/A
-    \end{tabular}
-
-\end{tabular}
-
-\section{Awards and Affiliations}
-\begin{tabular}{lp{11cm}}
-\emph{Best Contributor of the Year}
-&
-BBC News Developer Awards, 2015
-\\
-\emph{Best Bachelor Degree in Computer Science}
-&
-Aberystwyth University, 2015
-\\
-\emph{British Computer Society Prize for the Best Major Project}
-&
-Aberystwyth University, 2015
-\end{tabular}
-
-\section{Interests}
-I'm a tenor in the \emph{BBC Symphony Chorus} and regularly perform complex choral repertoire at internationally televised concerts. Previously: \emph{National Youth Choir of Wales} (Tenor: two years), \emph{Elizabethan Madrigal Singers} (Choral Director: one year, Tenor: two years).
+\subfile{partials/education}
 
 \section{References}
 \customreferences
