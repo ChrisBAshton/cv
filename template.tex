@@ -1,0 +1,200 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.0 (14/7/16)
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by
+% Vel (vel@LaTeXTemplates.com) and Harsh (harsh.gadgil@gmail.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+\input{cv--public}
+
+% Projects text
+\projects{
+
+\def\spacer{0.4cm}
+
+\textbf{StudentMunch.com} - food review site, using structured data markup to show as review in search results. Bespoke WordPress theme built in AMP.
+\newline
+\emph{AMP $\textbullet$ Structured data $\textbullet$ Validation}
+
+\vspace{\spacer}
+
+\textbf{GitHooks.io} - horizontally scalable, hosted webhooks platform. Allows developers to write and share GitHub-integrated webhooks.
+\newline
+\emph{LAMP $\textbullet$ AWS Lambda \& EC2 $\textbullet$ GitHub API $\textbullet$ OAuth $\textbullet$ Node $\textbullet$ Composer}
+
+\vspace{\spacer}
+
+\textbf{SmartResolution.org} - online dispute resolution platform with plugin support for AI-driven resolutions. Awarded the Best Major Project prize at university.
+\newline
+\emph{Cucumber \& Ruby $\textbullet$ PHP $\textbullet$ SQL $\textbullet$ PDO}
+
+\vspace{\spacer}
+
+\textbf{Secretary} - automatic quality assurance editorial checks for WordPress posts. Built to be extensible and config-driven.
+\newline
+\emph{WordPress $\textbullet$ YAML $\textbullet$ SVN $\textbullet$ Open-source}
+\newline
+\href{https://wordpress.org/plugins/secretary/}{\url{wordpress.org/plugins/secretary/}}
+
+\vspace{\spacer}
+
+\textbf{3D Solar System} - solar system written in WebGL.
+\newline
+\emph{WebGL $\textbullet$ JavaScript $\textbullet$ HTML5 $\textbullet$ CSS3}
+\newline
+\href{https://chrisbashton.github.io}{\url{chrisbashton.github.io}}
+}
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\cvname{CHRIS ASHTON} % Your name
+\cvjobtitle{ Senior Software Engineer } % Job
+% title/career
+\cvlinkedin{/in/chrisbashton}
+\cvgithub{chrisbashton}
+\cvsite{ashton.codes} % Personal website
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makeprofile % Print the sidebar
+
+\section{Profile}
+Senior Web Developer specialising in delivering responsive \& accessible front-end solutions. Currently helping to lead the Visual Journalism team within BBC News.
+
+\section{Achievements}
+\begin{itemize}
+    \item Graduated top of the class, awarded \textbf{Best Bachelor Degree in Computer Science}
+
+    \item Awarded \textbf{Best Contributor of the Year} at the BBC News Developer Awards 2015
+
+    \item \textbf{Published in \emph{Smashing Magazine}}: ``High-Impact Cross-Browser Testing''
+
+    \item \textbf{Founded my own company}, \emph{Webdapper Ltd}, whilst at university
+
+    \item Sing in the \textbf{\emph{BBC Symphony Chorus}}, whose concerts are broadcast internationally
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\begin{twenty} % Environment for a list with descriptions
+    \twentyitem
+    	{Feb 2017 -}
+		{Present}
+        {Senior Software Engineer}
+        {BBC}
+        {}
+        {
+        \begin{itemize}
+        \item Devised \& implemented an abstraction strategy to deliver Visual Journalism content across BBC products \& third-party platforms.
+        \item Actively promote accessible web design through my voluntary role as ``Accessibility Champion''.
+        \item Recruited six excellent developers internationally through writing job ads, screening CVs and code tests, and running interviews.
+        \item Line-manage a number of colleagues \& manage their objectives.
+    \end{itemize}
+    	}
+    \\
+	\twentyitem
+    	{Feb 2016 -}
+		{Jan 2017}
+        {Web Developer}
+        {BBC}
+        {}
+        {
+        {\begin{itemize}
+        \item Led the team's upgrade to a componentised project architecture, resulting in faster development and more robust content.
+        \item Regularly created multi-lingual, full-stack applications for the web and the BBC News/Sport apps, covering high profile events.
+    \end{itemize}}
+        }
+    \\
+    \twentyitem
+  		{Jul 2015 -}
+		{Jan 2016}
+        {Test Engineer}
+        {BBC}
+        {}
+        {
+        {\begin{itemize}
+        \item Set up test suites on CI, spanning unit tests, integration tests and visual screenshot tests inside Docker.
+        \item Led the ongoing development of the Wraith visual regression testing tool, now the BBC's most-starred open-source project.
+        \item Hand-built an in-house BDD framework in Node.
+        \item Led my team's adoption of user stories as a communication tool and test specification, saving hours of wasted developer effort.
+    \end{itemize}}
+        }
+     \\
+     \twentyitem
+   		{Aug 2014 -}
+		{Present}
+        {Founder}
+        {Webdapper Ltd}
+        {}
+        {
+        \begin{itemize}
+        \item Developed over 10 sites to date.
+        \item Generated over 20,000 Facebook likes for clients.
+    \end{itemize}
+    	}
+    \\
+    \twentyitem
+   		{Jul 2013 -}
+		{Aug 2014}
+        {Trainee Web Developer}
+        {BBC}
+        {}
+        {
+        {\begin{itemize}
+        \item Created `mobile-first', bespoke applications to tight deadlines for the BBC News website, delivering to an audience of millions.
+        \item Built a toolkit which sped up some developer tasks by up to 97\%
+        \item Templated the ‘datapic’ format. Blog: \url{http://bit.ly/1wT6XTz}
+    \end{itemize}}
+        }
+
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem
+    	{2011 - 2015}
+        {}
+        {BEng (Hons) Software Engineering \textnormal{(Grade: 84\%. BCS-accredited)}}
+        {Aberystwyth University}
+        {}
+        {}
+	\twentyitem
+    	{2003 - 2010}
+		{}
+        {A-Levels: \textnormal{AAB}, AS Level: \textnormal{B}
+        \newline
+        GCSEs: \textnormal{13 (11 at A*/A)}
+        }
+        {Lampeter Comprehensive School}
+        {}
+        {}
+	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
+\end{twenty}
+
+\end{document}
