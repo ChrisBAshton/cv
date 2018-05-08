@@ -19,20 +19,38 @@
 \documentclass[letterpaper]{twentysecondcv} % a4paper for A4
 \input{cv--public}
 
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\cvname{CHRIS ASHTON}
+\cvjobtitle{
+Senior software engineer \\
+Accessibility advocate \\
+Creative problem-solver
+} % Job
+\cvsummary{
+Senior web developer specialising in delivering responsive \& accessible front-end solutions. Currently helping to lead the Visual Journalism team within BBC News.
+}
+\cvlinkedin{/in/chrisbashton}
+\cvgithub{chrisbashton}
+\cvsite{ashton.codes}
+
 % Projects text
 \projects{
 
 \def\spacer{0.4cm}
 
-\textbf{StudentMunch.com} - food review site, using structured data markup to show as review in search results. Bespoke WordPress theme built in AMP.
-\newline
-\emph{AMP $\textbullet$ Structured data $\textbullet$ Validation}
-
-\vspace{\spacer}
-
 \textbf{GitHooks.io} - horizontally scalable, hosted webhooks platform. Allows developers to write and share GitHub-integrated webhooks.
 \newline
 \emph{LAMP $\textbullet$ AWS Lambda \& EC2 $\textbullet$ GitHub API $\textbullet$ OAuth $\textbullet$ Node $\textbullet$ Composer}
+
+\vspace{\spacer}
+
+\textbf{StudentMunch.com} - food review site, using structured data markup to show as review in search results. Bespoke WordPress theme built in AMP.
+\newline
+\emph{AMP $\textbullet$ Structured data $\textbullet$ Validation}
 
 \vspace{\spacer}
 
@@ -58,33 +76,23 @@
 }
 
 %----------------------------------------------------------------------------------------
-%	 PERSONAL INFORMATION
-%----------------------------------------------------------------------------------------
-% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
-
-\cvname{CHRIS ASHTON} % Your name
-\cvjobtitle{ Senior Software Engineer } % Job
-% title/career
-\cvlinkedin{/in/chrisbashton}
-\cvgithub{chrisbashton}
-\cvsite{ashton.codes} % Personal website
-
-%----------------------------------------------------------------------------------------
 
 \begin{document}
 
 \makeprofile % Print the sidebar
 
 \section{Profile}
-Senior Web Developer specialising in delivering responsive \& accessible front-end solutions. Currently helping to lead the Visual Journalism team within BBC News.
+\cvsummary
 
 \section{Achievements}
 \begin{itemize}
     \item Graduated top of the class, awarded \textbf{Best Bachelor Degree in Computer Science}
 
-    \item Awarded \textbf{Best Contributor of the Year} at the BBC News Developer Awards 2015
+    \item \textbf{Published several articles in \emph{Smashing Magazine}}; search @ChrisBAshton
 
-    \item \textbf{Published in \emph{Smashing Magazine}}: ``High-Impact Cross-Browser Testing''
+    \item Invited to speak at the \textbf{\emph{Paris Web} conference} in October 2018
+
+    \item Awarded \textbf{Best Contributor of the Year} at the BBC News Developer Awards 2015
 
     \item \textbf{Founded my own company}, \emph{Webdapper Ltd}, whilst at university
 
@@ -107,7 +115,8 @@ Senior Web Developer specialising in delivering responsive \& accessible front-e
         {
         \begin{itemize}
         \item Devised \& implemented an abstraction strategy to deliver Visual Journalism content across BBC products \& third-party platforms.
-        \item Actively promote accessible web design through my voluntary role as ``Accessibility Champion''.
+        \item Re-built projects to use Webpack \& Yeoman and migrated to AWS.
+        \item Built a custom pattern library and promoted accessible web design through my voluntary role as ``Accessibility Champion''.
         \item Recruited six excellent developers internationally through writing job ads, screening CVs and code tests, and running interviews.
         \item Line-manage a number of colleagues \& manage their objectives.
     \end{itemize}
@@ -134,10 +143,10 @@ Senior Web Developer specialising in delivering responsive \& accessible front-e
         {}
         {
         {\begin{itemize}
-        \item Set up test suites on CI, spanning unit tests, integration tests and visual screenshot tests inside Docker.
+        \item Set up integration and regression test suites on CI using Docker.
         \item Led the ongoing development of the Wraith visual regression testing tool, now the BBC's most-starred open-source project.
         \item Hand-built an in-house BDD framework in Node.
-        \item Led my team's adoption of user stories as a communication tool and test specification, saving hours of wasted developer effort.
+        \item Championed the adoption of user stories as a communication tool and test specification, saving hours of wasted developer effort.
     \end{itemize}}
         }
      \\
@@ -162,7 +171,7 @@ Senior Web Developer specialising in delivering responsive \& accessible front-e
         {}
         {
         {\begin{itemize}
-        \item Created `mobile-first', bespoke applications to tight deadlines for the BBC News website, delivering to an audience of millions.
+        \item Created many mobile-first, bespoke applications to tight deadlines.
         \item Built a toolkit which sped up some developer tasks by up to 97\%
         \item Templated the ‘datapic’ format. Blog: \url{http://bit.ly/1wT6XTz}
     \end{itemize}}
@@ -180,19 +189,17 @@ Senior Web Developer specialising in delivering responsive \& accessible front-e
 	\twentyitem
     	{2011 - 2015}
         {}
-        {BEng (Hons) Software Engineering \textnormal{(Grade: 84\%. BCS-accredited)}}
-        {Aberystwyth University}
+        {BEng (Hons) Software Engineering \textnormal{(1st class; BCS-accredited)}}
         {}
+        {Aberystwyth University}
         {}
 	\twentyitem
     	{2003 - 2010}
 		{}
-        {A-Levels: \textnormal{AAB}, AS Level: \textnormal{B}
-        \newline
-        GCSEs: \textnormal{13 (11 at A*/A)}
+        {A-Levels: \textnormal{AAB}, AS Level: \textnormal{B}, GCSEs: \textnormal{13 (11 at A*/A)}
         }
-        {Lampeter Comprehensive School}
         {}
+        {Lampeter Comprehensive School}
         {}
 	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
 \end{twenty}
