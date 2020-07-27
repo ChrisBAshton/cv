@@ -1,234 +1,332 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Twenty Seconds Resume/CV
-% LaTeX Template
-% Version 1.0 (14/7/16)
-%
-% Original author:
-% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by
-% Vel (vel@LaTeXTemplates.com) and Harsh (harsh.gadgil@gmail.com)
-%
-% License:
-% The MIT License (see included LICENSE file)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%
+% This CV theme is mmayer.tex
+%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+%%
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+% PUBLIC OR PRIVATE
+\input{cv--private}
 
-\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
-\input{cv--public}
+%% AltaCV uses the fontawesome5 and academicon fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
 
-%----------------------------------------------------------------------------------------
-%	 PERSONAL INFORMATION
-%----------------------------------------------------------------------------------------
-% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
 
-\cvname{CHRIS ASHTON}
-\cvjobtitle{
-Senior Software Engineer
-\vspace{2mm} %mm vertical space
-\\
-\small{
-Focused on \textbf{a11y}, \textbf{perf},
-\textbf{standards}, \textbf{docs}
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{LinkBlue}{HTML}{0B0080}
+% \colorlet{name}{black}
+\colorlet{tagline}{VividPurple}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{customlinkcolor}{LinkBlue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\addbibresource{publications.bib}
+
+\begin{document}
+\name{Chris Ashton}
+\tagline{Full-stack Software Engineer}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+% \photoR{2.5cm}{mmayer-wikipedia-cc-by-2_0}
+% \photoL{2cm}{Yacht_High,Suitcase_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{\cvmail}
+  \phone{\cvnumberphone}
+%   \mailaddress{London}
+  \location{London, UK}
+  \homepage{ashton.codes}
+  \github{ChrisBAshton}
+%  \twitter{@ChrisBAshton}
+  \linkedin{chrisbashton}
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{0000-0000-0000-0000}
+  %% You can add your own arbtrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
 }
-\\
-\small{
-Works at \textbf{diverse}, \textbf{flexible}, \textbf{autonomous} places
-}
-\small{
-Enjoys \textbf{bouldering}, \textbf{writing},
-\textbf{singing}
-}
-} % Job
-\cvsummary{
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+%\cvevent{Developer}{Government Digital Service}{April 2019 -- Present}{LOCATION GOES HERE IF YOU WANT}
+\cvevent{Developer}{Government Digital Service}{April 2019 -- Present}{}
+\begin{itemize}
+    \item Currently developing Rails services and rewriting legacy systems on \url{GOV.UK}, using Agile methodologies. Other responsibilities include DevOps, recruitment, and running a11y-focussed newsletters.
+\end{itemize}
+
+\divider
+
+\cvevent{Acting Technical Lead}{BBC, Articles}{Nov 2018 -- April 2019}{}
+\begin{itemize}
+    \item Led the delivery of v1 of the new BBC article renderer: an isomorphic React single page application and shared component library.
+\end{itemize}
+
+\divider
+
+\cvevent{Senior Software Engineer}{BBC, Visual Journalism}{Feb 2017 -- Oct 2018}{}
+
+\begin{itemize}
+    \item Recruited and trained a global team. Line managed and mentored several developers, allocating projects aligning with their goals.
+    \item Upgraded legacy tech stack to pure Node/NPM and Webpack (including bespoke plugins). Migrated deployment pipeline to AWS.
+    \item Volunteered as ``Accessibility Champion'' and improved standards.
+\end{itemize}
+
+\divider
+
+\cvevent{Web Developer}{BBC, Visual Journalism}{Feb 2016 -- Jan 2017}{}
+
+\begin{itemize}
+    \item Devised and implemented an abstraction strategy to deliver Visual Journalism content across the BBC apps, web and third-parties.
+    \item Regularly created multi-lingual, full-stack applications for the web and the BBC apps, covering high profile events to tight deadlines.
+\end{itemize}
+
+\divider
+
+\cvevent{Test Engineer}{BBC, Visual Journalism}{July 2015 -- Jan 2016}{}
+
+\begin{itemize}
+    \item Led the maintenance of a screenshot testing tool (Wraith). Hand-built a BDD framework in Node. Set up Docker test suites on CI.
+\end{itemize}
+
+\divider
+
+\cvevent{Founder}{Webdapper Ltd}{Aug 2014 -- Present}{}
+
+\begin{itemize}
+    \item Founded my own company whilst at university. To date, I've planned, designed and developed over 10 websites for clients.
+\end{itemize}
+
+\divider
+
+\cvevent{Trainee Web Developer}{BBC, Visual Journalism}{July 2013 -- Aug 2014}{}
+
+\begin{itemize}
+    \item Developed the \emph{Commonwealth Games} feature, which was televised on BBC Breakfast. I also took the initiative to translate it to Welsh.
+    \item Templated the ‘datapic’ format. Blog: \url{http://bit.ly/1wT6XTz}
+\end{itemize}
+
+\cvsection{Publications}
+
+\nocite{*}
+
+\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Talks}},type=inproceedings]
+
+\divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+\divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Articles}}, type=misc]
+
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Summary}
+\begin{quote}
 Experienced full-stack web developer, specialising in front-end. A pragmatic and organised leader, currently working for the Government Digital Service.
-}
-\cvlinkedin{/in/chrisbashton}
-\cvgithub{chrisbashton}
-\cvsite{https://ashton.codes}
+\end{quote}
 
-% Projects text
-\projects{
+\bigskip
 
-\def\spacer{0.4cm}
+Passions:
+\cvtag{a11y}
+\cvtag{perf}
+\cvtag{standards}
+
+\medskip
+
+Values:
+\hspace{2mm} % a bit of manual fudging to get labels to line up
+\cvtag{diversity}
+\cvtag{flexibility}
+\cvtag{autonomy}
+
+% deliberately no \medskip here as the tags above are a bit long and end up adding some margin
+
+Enjoys:
+\hspace{2mm} % a bit of manual fudging to get labels to line up
+\cvtag{bouldering}
+\cvtag{cooking}
+\cvtag{singing}
+
+\cvsection{Achievements}
+
+\cvachievement{\faTrophy}{Graduated top of the class}{Awarded \emph{Best Bachelor Degree in Computer Science} out of approx 80 people}
+
+\divider
+
+\cvachievement{\faTrophy}{`Exceeded' rating}{Achieved highest rating in GDS end-of-year review, March 2020}
+
+\divider
+
+\cvachievement{\faTrophy}{Conference speaker}{Spoke at Paris Web 2018}
+
+\divider
+
+\cvachievement{\faTrophy}{Smashing Magazine contributor}{Published a series of articles on \mbox{\href{https://www.smashingmagazine.com/author/chrisbashton/}{smashingmagazine.com}}}
+
+\divider
+
+\cvachievement{\faTrophy}{Best Contributor of the Year}{Awarded at the BBC News Developer Awards 2015}
+
+\divider
+
+\cvachievement{\faTrophy}{BBC Symphony Chorus}{Have sung in several televised Proms since joining in 2013}
+
+\cvsection{Education}
+
+\cvevent{B.Eng. in Software Engineering}{Aberystwyth University}{Sept 2011 -- June 2015}{}
+
+\textbf{1st class, with Honours; BCS-accredited}
+
+\divider
+
+\cvevent{AAB (A-Levels), B (AS Level)}{Lampeter Comprehensive School}{2003 -- 2010}{}
+
+\textbf{13 GCSEs (11 at A*/A)}
+
+\newpage
+
+\cvsection{Projects}
+
+\def\spacer{0.7cm}
 
 \textbf{StudentMunch.com} - food review site, using structured data markup to show as reviews in search results. Built as a Progressive Web App on top of AMP.
-\newline
-\emph{Service Workers $\textbullet$ AMP $\textbullet$ PWA $\textbullet$ PRPL pattern $\textbullet$ Offline first $\textbullet$ Structured data}
+
+\medskip
+
+  \cvtag{Service Workers}
+  \cvtag{AMP}
+  \cvtag{Offline first}
+  \\
+  \cvtag{PWA}
+  \cvtag{PRPL pattern}
+  \cvtag{Structured data}
 
 \vspace{\spacer}
 
 \textbf{GitHooks.io} - horizontally scalable, hosted webhooks platform. Allows developers to write and share GitHub webhooks.
-\newline
-\emph{LAMP $\textbullet$ AWS Lambda \& EC2 $\textbullet$ GitHub API $\textbullet$ OAuth $\textbullet$ Node $\textbullet$ Composer}
+
+\medskip
+
+  \cvtag{LAMP}
+  \cvtag{AWS Lambda}
+  \cvtag{EC2}
+  \cvtag{Node}
+  \cvtag{GitHub API}
+  \cvtag{OAuth}
+  \cvtag{Composer}
 
 \vspace{\spacer}
 
 \textbf{SmartResolution.org} - online dispute resolution platform with plugin support for AI-driven resolutions. Awarded the Best Major Project prize at university.
 \newline
-\emph{Cucumber \& Ruby $\textbullet$ PHP $\textbullet$ SQL $\textbullet$ PDO}
+\href{https://smartresolution.org}{\url{smartresolution.org}}
+
+\medskip
+
+  \cvtag{Cucumber \& Ruby}
+  \cvtag{PHP}
+  \cvtag{SQL}
+  \cvtag{PDO}
 
 \vspace{\spacer}
 
 \textbf{Secretary} - automatic quality assurance editorial checks for WordPress posts. Built to be extensible and config-driven.
 \newline
-\emph{WordPress $\textbullet$ YAML $\textbullet$ SVN $\textbullet$ Open-source}
-\newline
 \href{https://wordpress.org/plugins/secretary/}{\url{wordpress.org/plugins/secretary/}}
+
+\medskip
+
+  \cvtag{WordPress}
+  \cvtag{YAML}
+  \cvtag{SVN}
+  \cvtag{Open-source}
 
 \vspace{\spacer}
 
 \textbf{3D Solar System} - solar system written in WebGL.
 \newline
-\emph{WebGL $\textbullet$ JavaScript $\textbullet$ HTML5 $\textbullet$ CSS3}
-\newline
 \href{https://chrisbashton.github.io}{\url{chrisbashton.github.io}}
 
-}
+\medskip
 
-%----------------------------------------------------------------------------------------
+  \cvtag{WebGL}
+  \cvtag{JavaScript}
+  \cvtag{HTML5}
+  \cvtag{CSS3}
 
-\begin{document}
+%\cvsection{Languages}
+%\cvskill{English}{5}
+%\cvskill{Welsh}{3}
+%\newpage
 
-\makeprofile % Print the sidebar
+\cvsection{Referees}
 
-\section{Profile}
-\cvsummary
+\customreferences
 
-\section{Achievements}
-\begin{itemize}[itemsep=-.5mm] % manually tighten space between list items by 0.5mm
-    \item Graduated top of the class, awarded \textbf{Best Bachelor Degree in Computer Science}
-
-    \item Awarded \textbf{Best Contributor of the Year} at the BBC News Developer Awards 2015
-
-    \item Spoke at the \textbf{\emph{Paris Web}} 2018 conference: \url{https://vimeo.com/295213010}
-
-    \item \textbf{Published a series of articles in \emph{Smashing Magazine}}: \href{https://www.smashingmagazine.com/author/chrisbashton/}{/author/chrisbashton/}
-
-    \item Sing in the \textbf{\emph{BBC Symphony Chorus}}, whose concerts are broadcast internationally
-\end{itemize}
-
-%----------------------------------------------------------------------------------------
-%	 EXPERIENCE
-%----------------------------------------------------------------------------------------
-
-\section{Experience}
-
-\begin{twenty} % Environment for a list with descriptions
-    \twentyitem
-        {April 2019 -}
-		{Present}
-        {Developer}
-        {Government Digital Service}
-        {}
-        {
-        \begin{itemize}
-        \item Currently developing Rails services and rewriting legacy systems on \url{GOV.UK}, using Agile methodologies. Other responsibilities include DevOps, recruitment, and running a11y-focussed newsletters.
-        \end{itemize}
-        }
-    \\
-    \twentyitem
-        {Nov 2018 -}
-		{April 2019}
-        {Acting Technical Lead}
-        {BBC, Articles}
-        {}
-        {
-        \begin{itemize}
-        \item Led the delivery of v1 of the new BBC article renderer: an isomorphic React single page application and shared component library.
-        \end{itemize}
-    	}
-    \\
-    \twentyitem
-    	{Feb 2017 -}
-		{Oct 2018}
-        {Senior Software Engineer}
-        {BBC, Visual Journalism}
-        {}
-        {
-        \begin{itemize}
-        \item Recruited and trained a global team. Line managed and mentored several developers, allocating projects aligning with their goals.
-        \item Upgraded legacy tech stack to pure Node/NPM and Webpack (including bespoke plugins). Migrated deployment pipeline to AWS.
-        \item Volunteered as ``Accessibility Champion'' and improved standards.
-        \end{itemize}
-    	}
-    \\
-	\twentyitem
-    	{Feb 2016 -}
-		{Jan 2017}
-        {Web Developer}
-        {BBC, Visual Journalism}
-        {}
-        {
-        {\begin{itemize}
-        \item Devised and implemented an abstraction strategy to deliver Visual Journalism content across the BBC apps, web and third-parties.
-        \item Regularly created multi-lingual, full-stack applications for the web and the BBC apps, covering high profile events to tight deadlines.
-    \end{itemize}}
-        }
-    \\
-    \twentyitem
-  		{Jul 2015 -}
-		{Jan 2016}
-        {Test Engineer}
-        {BBC, Visual Journalism}
-        {}
-        {
-        {\begin{itemize}
-        \item Led the maintenance of a screenshot testing tool (Wraith). Hand-built a BDD framework in Node. Set up Docker test suites on CI.
-    \end{itemize}}
-        }
-     \\
-     \twentyitem
-   		{Aug 2014 -}
-		{Present}
-        {Founder}
-        {Webdapper Ltd}
-        {}
-        {
-        \begin{itemize}
-        \item Founded my own company whilst at university. To date, I've planned, designed and developed over 10 websites for clients.
-    \end{itemize}
-    	}
-    \\
-    \twentyitem
-   		{Jul 2013 -}
-		{Aug 2014}
-        {Trainee Web Developer}
-        {BBC, Visual Journalism}
-        {}
-        {
-        {\begin{itemize}
-        \item Developed the \emph{Commonwealth Games} feature, which was televised on BBC Breakfast. I also took the initiative to translate it to Welsh.
-        \item Templated the ‘datapic’ format. Blog: \url{http://bit.ly/1wT6XTz}
-    \end{itemize}}
-        }
-
-\end{twenty}
-
-%----------------------------------------------------------------------------------------
-%	 EDUCATION
-%----------------------------------------------------------------------------------------
-\section{Education}
-
-\begin{twenty} % Environment for a list with descriptions
-	\twentyitem
-    	{2011 - 2015}
-        {}
-        {BEng (Hons) Software Engineering \textnormal{(1st class; BCS-accredited)}}
-        {}
-        {Aberystwyth University}
-        {}
-	\twentyitem
-    	{2003 - 2010}
-		{}
-        {A-Levels: \textnormal{AAB}, AS Level: \textnormal{B}, GCSEs: \textnormal{13 (11 at A*/A)}
-        }
-        {}
-        {Lampeter Comprehensive School}
-        {}
-	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
-\end{twenty}
+\end{paracol}
 
 \end{document}
