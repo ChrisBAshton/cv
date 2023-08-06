@@ -12,7 +12,7 @@
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
 \documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
 % PUBLIC OR PRIVATE
-\input{cv--private}
+\input{cv--public}
 
 %% AltaCV uses the fontawesome5 and academicon fonts
 %% and packages.
@@ -23,6 +23,9 @@
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
+
+% For configuring nested lists
+\usepackage{enumitem}
 
 % Change the font if you want to, depending on whether
 % you're using pdflatex or xelatex/lualatex
@@ -114,63 +117,106 @@
 % break across pages if things get too long.
 \begin{paracol}{2}
 
+\def\nestedlistspacer{0.1cm}
+
 \cvsection{Experience}
 
 %\cvevent{Developer}{Government Digital Service}{April 2019 -- Present}{LOCATION GOES HERE IF YOU WANT}
-\cvevent{Senior Developer}{Government Digital Service}{June 2021 -- Present}{}
+
+\cvevent{Lead Developer}{Government Digital Service}{July 2023 -- Present}{}
 
 \begin{itemize}
-    \item Currently leading an informal team responsible for rolling out Continuous Deployment and improving developer tooling.
+    \item Lead Developer in the platform space, on 6 month EOI.
 \end{itemize}
 
 \divider
 
-\cvevent{Developer}{Government Digital Service}{April 2019 -- May 2021}{}
+\cvevent{Senior Developer}{}{June 2021 -- July 2023}{}
+
 \begin{itemize}
+    \item \textbf{Technical Lead on the Platform Security \& Reliability team.}
+
+    \vspace{\nestedlistspacer}
+    \begin{itemize}[label=$\triangleright$]
+        \item Work closely with Delivery Manager and Product Owner to plan and prioritise work for our team of developers, SREs and security experts.
+        \item Regularly share knowledge through show and tells, mobbing sessions, code reviews and pairing. Introduced the 'mission leads' model, giving team members opportunities to gain leadership experience.
+        \item Wrote and delivered RFC-156 for automatic merging of internal Dependabot PRs, eliminating a toil task and freeing up developer time. Required considerable technical planning to build in a secure manner.
+        \item Reviewed and implemented the design for the new postcode lookup solution on GOV.UK, in a way that can scale with spikes in traffic.
+    \end{itemize}
+
+    \item \textbf{Technical Lead on the 2nd Line Support function}.
+
+    \vspace{\nestedlistspacer}
+    \begin{itemize}[label=$\triangleright$]
+        \item Led efforts to broaden our drilling strategy to better prepare engineers for incidents. Rewrote our incident guidance documentation.
+        \item Created a rota generator to more fairly allocate support shifts, and drove change in shift pattern to increase available pool of developers.
+        \item Drove a change in policy to reduce the level of access we grant apprentices. Rewrote our user monitoring systems to make access more explicit \& predictable. Automated much of this with Terraform.
+    \end{itemize}
+
+    \item Led GOV.UK's response to a security advisory, liaising with tech leads and overseeing the patching of all vulnerable apps within a few days. Later raised RFC-153 to enable automated security PRs.
+
+    \item Independently discovered and patched a cross-site scripting bug on a GOV.UK subdomain. I was credited in the security advisory. \href{https://github.com/alphagov/tech-docs-gem/security/advisories/GHSA-x2xw-hw8g-6773}{\url{github.com/alphagov/tech-docs-gem/security/advisories/GHSA-x2xw-hw8g-6773}}
+
+    \item I was GOV.UK's point of contact for a penetration test conducted by the cyber team, requiring walking them through the brief, explaining the architecture of GOV.UK and ensuring they had the necessary access.
+\end{itemize}
+
+\divider
+
+\cvevent{Developer}{}{April 2019 -- May 2021}{}
+\begin{itemize}
+    \item Technical Lead of the Developer Tools community. Made significant improvements to the processes around our documentation.
     % 70k-150k weekly Sentry errors in early-mid 2020, reduced to just 8.5k in mid January 2021.
     \item Led a stream of work to reduce application errors across GOV.UK by over 90\%. Introduced alerting so that new issues can be quickly fixed.
-    \item Regularly work on a number of Ruby on Rails applications: fixing bugs through TDD, upgrading dependencies, adding new features backed by user research, and contributing to GOV.UK Design System components.
-    \item Use Icinga alerts, Grafana dashboards, Kibana logs and Sentry errors to debug issues on production. I've led on incidents, using DevOps techniques to monitor disk space and processes on machines, and Rails console to query PostgreSQL / MongoDB records with ActiveRecord.
-    \item Work in agile, multidisciplinary teams that adopt a mixture of scrum and kanban, and have worked with stakeholders to write Trello cards.
     \item Simplified infrastructure and cut costs by migrating a static site from S3 to GitHub Pages, and its build job from Jenkins to GitHub Actions.
-    \item Proactively paired with new developers on my team, and was designated the 'buddy' to a new joiner. I now line manage an apprentice developer.
+    \item Contributed to a number of Ruby on Rails applications, working in agile, multidisciplinary teams that use scrum and kanban, adding new features backed by user research and fixing bugs through TDD.
+    \item I've led on incidents, using alerts, dashboards and logs to debug issues on production. I've used DevOps techniques to monitor disk space and processes on machines, and used ActiveRecord and SQL queries to search PostgreSQL and MongoDB records.
+    \item Proactively paired with new developers on my team, and was designated the 'buddy' to a new joiner. Started line-managing an apprentice.
     \item Co-ordinated an audit of all GOV.UK repositories, archiving 27 legacy repos to reduce the overhead of keeping dependencies up to date.
     \item Sifted CVs and took part in phone interviews for several developer roles. Wrote article about working at GDS, subsequently used for recruitment.
 \end{itemize}
 
 \divider
 
-\cvevent{Acting Technical Lead}{BBC, Articles}{Nov 2018 -- April 2019}{}
+\cvevent{Acting Technical Lead}{BBC}{Nov 2018 -- April 2019}{}
 \begin{itemize}
     \item Led the delivery of v1 of the new BBC article renderer: an isomorphic React single page application and shared component library.
 \end{itemize}
 
 \divider
 
-\cvevent{Senior Software Engineer}{BBC, Visual Journalism}{Feb 2017 -- Oct 2018}{}
+\cvevent{Senior Software Engineer}{}{Feb 2017 -- Oct 2018}{}
 
 \begin{itemize}
-    \item Recruited and trained a global team. Line managed and mentored several developers, allocating projects aligning with their goals.
+    \item Recruited and trained developers in India and Indonesia as part of BBC's global expansion. Line managed and mentored around a dozen developers, including several from the trainee and graduate schemes.
     \item Upgraded legacy tech stack to pure Node/NPM and Webpack (including bespoke plugins). Migrated deployment pipeline to AWS.
-    \item Volunteered as ``Accessibility Champion'' and improved standards.
+    \item Volunteered as ``Accessibility Champion'' and improved standards within the department, such as including progressive enhancement by default.
 \end{itemize}
 
 \divider
 
-\cvevent{Web Developer}{BBC, Visual Journalism}{Feb 2016 -- Jan 2017}{}
+\cvevent{Web Developer}{}{Feb 2016 -- Jan 2017}{}
 
 \begin{itemize}
     \item Devised and implemented an abstraction strategy to deliver Visual Journalism content across the BBC apps, web and third-parties. Wrote about this on \emph{Smashing Magazine} and spoke about it at \emph{Paris Web Conf}.
     \item Regularly created multi-lingual, full-stack applications for the web and the BBC apps, covering high profile events to tight deadlines.
 \end{itemize}
 
-% UNCOMMENT THIS IF BELOW JOB APPEARS ON PAGE 1
-% \divider
+\divider
 
-\cvevent{Test Engineer}{BBC, Visual Journalism}{July 2015 -- Jan 2016}{}
+\cvevent{Test Engineer}{}{July 2015 -- Jan 2016}{}
 
 \begin{itemize}
     \item Led the maintenance of a screenshot testing tool (Wraith). Hand-built a BDD framework in Node. Set up Docker test suites on CI.
+    \item Awarded \emph{Best Contributor of the Year} at the BBC News Developer Awards.
+\end{itemize}
+
+\divider
+
+\cvevent{Trainee Web Developer}{}{July 2013 -- Aug 2014}{}
+
+\begin{itemize}
+    \item Automated a large number of developer tasks, dramatically improving team productivity. Working with a senior designer, I templated visual formats that previously had to be crafted from scratch.
+    \item Developed the \emph{Commonwealth Games} feature, which was televised on BBC Breakfast. Being bilingual, I also took the initiative to translate it to Welsh. \url{https://www.bbc.co.uk/news/uk-28062001}
 \end{itemize}
 
 \divider
@@ -178,34 +224,10 @@
 \cvevent{Founder}{Webdapper Ltd}{Aug 2014 -- Present}{}
 
 \begin{itemize}
-    \item Founded my own company whilst at university. To date, I've planned, designed and developed over 10 websites for clients.
+    \item Continued contracting for the BBC (one day per week) through Webdapper, which I founded during my final year at university. To date, I've also planned, designed and developed over 10 websites for other clients.
 \end{itemize}
 
 \divider
-
-\cvevent{Trainee Web Developer}{BBC, Visual Journalism}{July 2013 -- Aug 2014}{}
-
-\begin{itemize}
-    \item Developed the \emph{Commonwealth Games} feature, which was televised on BBC Breakfast. I also took the initiative to translate it to Welsh.
-    \item Templated the ‘datapic’ format. Blog: \url{http://bit.ly/1wT6XTz}
-\end{itemize}
-
-\cvsection{Publications}
-
-\nocite{*}
-
-\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Newsletters}},type=newsletter]
-
-\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Talks}},type=inproceedings]
-
-%\divider
-
-\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
-
-%\divider
-
-\printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Articles}}, type=misc]
-
 
 %% Switch to the right column. This will now automatically move to the second
 %% page if the content is too long.
@@ -213,52 +235,60 @@
 
 \cvsection{Summary}
 \begin{quote}
-I am a creative, organised and
+I am a creative, organised, pragmatic
 \\
-pragmatic full-stack web developer, specialising in Ruby on Rails, HTML, CSS, JavaScript and Accessibility.
+web developer with extensive back end
+\\
+and front end experience.
 \end{quote}
 
-\cvsection{Achievements}
+% \cvsection{Achievements}
 
-\cvachievement{\faTrophy}{Graduated top of university class}{Awarded \emph{Best Bachelor Degree in Computer Science} out of approx 80 people}
-
-\divider
-
-\cvachievement{\faTrophy}{`Exceeded' rating}{Achieved highest rating in GDS end-of-year reviews in 2020 and 2021}
-
-\divider
-
-\cvachievement{\faTrophy}{Conference speaker}{Spoke at Paris Web 2018}
-
-\divider
-
-\cvachievement{\faTrophy}{Smashing Magazine contributor}{Published a series of articles on \mbox{\href{https://www.smashingmagazine.com/author/chrisbashton/}{smashingmagazine.com}}}
-
-\divider
-
-\cvachievement{\faTrophy}{Run the \emph{frequent11y} newsletter}{To date, I've distributed almost 400 accessibility newsletters to hundreds of subscribers.}
-
-\divider
-
-\cvachievement{\faTrophy}{Best Contributor of the Year}{Awarded at the BBC News Developer Awards 2015}
-
-\divider
-
-\cvachievement{\faTrophy}{BBC Symphony Chorus}{Have sung in several televised Proms since joining in 2013}
+% \cvachievement{\faTrophy}{BBC Symphony Chorus (2013 - 2023)}{Have sung in several televised Proms}
 
 \cvsection{Education}
 
-\cvevent{B.Eng. in Software Engineering}{Aberystwyth University, Wales}{Sept 2011 -- June 2015}{}
+\cvevent{B.Eng. in Software Engineering \newline 1st class, with Honours, BCS-accredited}{Aberystwyth University, Wales}{Sept 2011 -- June 2015}{}
 
-\textbf{1st class, with Honours; BCS-accredited}
-
-Technologies used: Java, C++, C, Haskell, Python, Ruby, PHP
-
-Key modules: Advanced Computer Graphics, Agile Methodologies, Machine Learning, Computer Vision, Data Structures \& Algorithms
+\begin{itemize}
+    \item \textbf{Graduated top of the class} and awarded \emph{Best Bachelor Degree in Computer Science} out of approximately 80 people.
+    \item Technologies used: Java, C++, C, Haskell, Python, Ruby, PHP.
+    \item Key modules: Advanced Computer Graphics, Agile Methodologies, Machine Learning, Computer Vision, Data Structures \& Algorithms.
+\end{itemize}
 
 \divider
 
-\cvevent{AAB (A-Levels), B (AS Level), 13 GCSEs (11 at A*/A)}{Lampeter Comprehensive School, Wales}{}{}
+\cvevent{AAB (A-Levels), B (AS Level), \newline 13 GCSEs (11 at A*/A)}{Lampeter Comprehensive School, Wales}{}{}
+
+\cvsection{Publications}
+
+\def\publicationspacer{0.2cm}
+
+\cvsubsection{\printinfo{\faBook}{Newsletters}}
+\textbf{frequent11y} (2019 - Present)
+\newline
+I've published almost 1000 a11y newsletters to a large cross-government community and hundreds of independent subscribers.
+\newline
+\href{https://ashton.codes/subscribe-to-frequent11y}{\url{https://ashton.codes/subscribe-to-frequent11y}}
+
+\vspace{\publicationspacer}
+\cvsubsection{\printinfo{\faUsers}{Talks}}
+\textbf{Paris Web conference}
+\newline
+I represented the BBC in 2018 with my talk, "Publishing content to multiple platforms".
+\newline
+\href{https://vimeo.com/295213010}{\url{https://vimeo.com/295213010}}
+
+\vspace{\publicationspacer}
+\cvsubsection{\printinfo{\faFile*[regular]}{Articles}}
+\begin{itemize}
+    \item \textbf{What I like about being a developer at GDS} \newline \href{https://technology.blog.gov.uk/2019/08/14/what-i-like-about-being-a-developer-at-gds/}{\url{technology.blog.gov.uk/2019/08/14/what-i-like-about-being-a-developer-at-gds/}}
+
+    \item \textbf{I Used The Web For A Day...}
+    \newline Series of 5 accessibility articles for \emph{Smashing Magazine}.
+    \newline
+    \href{https://www.smashingmagazine.com/author/chrisbashton/}{\url{smashingmagazine.com/author/chrisbashton}}
+\end{itemize}
 
 \newpage
 
@@ -293,7 +323,9 @@ Key modules: Advanced Computer Graphics, Agile Methodologies, Machine Learning, 
 
 \vspace{\spacer}
 
-\textbf{SmartResolution.org} - online dispute resolution platform with plugin support for AI-driven resolutions. Awarded the Best Major Project prize at university.
+\textbf{SmartResolution} - online dispute resolution platform with plugin support for AI-driven resolutions. Awarded the Best Major Project prize at university.
+\newline
+\href{https://github.com/ChrisBAshton/smartresolution}{\url{github.com/ChrisBAshton/smartresolution}}
 
 \medskip
 

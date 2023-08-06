@@ -299,12 +299,13 @@
 }
 
 % v1.1.4: fixes inconsistent font size
+% \cvevent{Senior Developer}{Government Digital Service}{June 2021 -- July 2023}{}
 \newcommand{\cvevent}[4]{%
-  {\large\color{emphasis}#1\par}
-  \smallskip\normalsize
   \ifstrequal{#2}{}{}{
   \textbf{\color{accent}#2}\par
   \smallskip}
+  {\large\color{emphasis}#1\par}
+  \smallskip\normalsize
   \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendar~#3}}}%
   \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker~#4}}}\par
   \medskip\normalsize
